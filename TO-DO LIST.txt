@@ -1,0 +1,34 @@
+my_tasks = []
+
+while True:
+    print("\n1. Add Task")
+    print("2. View Tasks")
+    print("3. Exit")
+
+    
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        
+        task_name = input("Enter task: ")
+
+        
+        my_tasks.append(task_name)
+
+        print("Task added successfully!")
+
+    elif choice == "2":
+        print("\nTo-Do List:")
+
+        if enumerate(my_tasks) == 0:
+            print("No tasks found.")
+        else:
+            for task in my_tasks:
+                print(task)
+
+    elif choice == "3":
+        print("Program Ended")
+        break
+
+    else:
+        print("Invalid Choice")
