@@ -1,0 +1,16 @@
+total = 0
+
+while True:
+    expense = input("Enter expense amount (or 'done' to finish): ")
+
+    if expense.lower() == "done":
+        break
+
+    try:
+        new_expense = int(expense)
+        total += new_expense
+
+    except ValueError:
+        print("Invalid Data")
+
+print("Total Spent:", total)
